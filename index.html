@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>owo</title>
+    <title>Te amo ❤️</title>
     <style>
         body {
             display: flex;
@@ -11,181 +11,67 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #F0B6D5;  
-            font-family: Arial, sans-serif;
+            background-color: #FADADD;
+            margin: 0;
+            text-align: center;
+            position: relative;
             overflow: hidden;
         }
-        #verificacion {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        input {
-            padding: 10px;
-            font-size: 16px;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #contenido {
-            display: none;
-            text-align: center;
-            opacity: 0;
-            transform: scale(0.8);  
-            transition: transform 1s ease, opacity 1s ease;
-        }
-        #contenido.mostrar {
-            display: block;
-            opacity: 1;
-            transform: scale(1);  
-        }
-        #imagen {
+        img {
             width: 300px;
             height: auto;
-            opacity: 0;
-            transform: scale(0.8);
-            transition: opacity 1s ease, transform 1s ease;
-            animation: palpitar 1.5s infinite;  
-            cursor: pointer; 
+            cursor: pointer;
         }
-        #contenido.mostrar #imagen {
-            opacity: 1;
-            transform: scale(1);
-        }
-        h2 {
-            font-size: 32px;
+        #texto {
+            margin-top: 20px;
+            font-size: 20px;
             font-weight: bold;
         }
-        p {
-            font-size: 36px;
-            font-weight: bold;
-            animation: palpitar 1.5s infinite;  
-        }
-        @keyframes palpitar {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);  
-            }
-            100% {
-                transform: scale(1);  
-            }
-        }
-        .confeti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: red;
-            opacity: 0.7;
-            animation: caer 4s linear infinite;
-        }
-        @keyframes caer {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-        .corazon {
+        .emoji {
             position: absolute;
             font-size: 24px;
-            color: red;
-            animation: flotar 2s linear infinite;
+            animation: floatUp 1s ease-out forwards;
         }
-        @keyframes flotar {
-            0% {
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                transform: translateY(-100px) scale(1.5);
-            }
-            100% {
-                transform: translateY(0) scale(1);
-            }
+        @keyframes floatUp {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-50px); }
         }
     </style>
 </head>
 <body>
-   
-    <audio id="audioFondo" src="The One.mp3" preload="auto"></audio>
-
-    <div id="verificacion">
-        <img src="https://i.ibb.co/ksdBf2bn/image.png" alt="owo" id="imagenArriba">
-        <h1>Escribe tu nombre ❤️</h1>
-        <input type="text" id="nombreInput" placeholder="Ingresa tu nombre">
-        <button onclick="verificarNombre()">Verificar</button>
-    </div>
-    <div id="contenido">
-        <p>Florecitas amarillas para mi amorcito 🌻❤️</p>
-        <p>te amo muchote sos la mejor novia del mundo ❤️</p>
-        <img id="imagen" src="https://i.ibb.co/sJXnbZcZ/image-removebg-preview-3.png" alt="Imagen Secreta" onclick="crearCorazones()">
-    </div>
+    <img id="imagen" src="milk_dance.gif" alt="Imagen" onclick="cambiarImagen(event)">
+    <div id="texto">Toca a Milk 🌻</div>
 
     <script>
-        function verificarNombre() {
-            var nombre = document.getElementById("nombreInput").value;
-            var verificacion = document.getElementById("verificacion");
-            var contenido = document.getElementById("contenido");
-            var audio = document.getElementById("audioFondo");
-            audio.volume = 0.2;
-            
-            if (nombre.toLowerCase() === "mari") {
-                verificacion.style.display = "none";
-                contenido.style.display = "block";
-                setTimeout(() => {
-                    contenido.classList.add("mostrar");
-                    lanzarConfeti();
-                }, 100);
-
-               
-                audio.play();
-            } else {
-                alert("Hmmmmmmmmmmmmmmmm, quien sos >:(");
+        function cambiarImagen(event) {
+            let img = document.getElementById("imagen");
+            let texto = document.getElementById("texto");
+            if (img.src.includes("milk_dance.gif")) {
+                img.src = "milk_mad.gif";
+                texto.innerText = "No tan fuerte tonota, la hiciste llorar 😡";
+                generarEmojis(event, "😡");
+            } else if (img.src.includes("milk_mad.gif")) {
+                img.src = "milk_love.gif";
+                texto.innerText = "Te amo con todo mi corazón sos lo mejor que me pudo haber pasado, estoy muy feliz de ser tu novio y me encantas en todos los sentidos ❤️";
+                img.onclick = generarCorazones; 
+                generarEmojis(event, "❤️");
             }
         }
 
-        function lanzarConfeti() {
-            for (let i = 0; i < 100; i++) {
-                let confeti = document.createElement("div");
-                confeti.classList.add("confeti");
-                confeti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-                confeti.style.left = `${Math.random() * 100}vw`;
-                confeti.style.animationDuration = `${Math.random() * 3 + 2}s`;
-                document.body.appendChild(confeti);
-
-                setTimeout(() => {
-                    confeti.remove();
-                }, 5000);
+        function generarEmojis(event, emoji) {
+            for (let i = 0; i < 5; i++) {
+                let element = document.createElement("div");
+                element.className = "emoji";
+                element.innerHTML = emoji;
+                element.style.left = `${event.clientX + (Math.random() * 40 - 20)}px`;
+                element.style.top = `${event.clientY + (Math.random() * 40 - 20)}px`;
+                document.body.appendChild(element);
+                setTimeout(() => element.remove(), 1000);
             }
         }
 
-        function crearCorazones() {
-            for (let i = 0; i < 10; i++) {
-                let corazon = document.createElement("div");
-                corazon.classList.add("corazon");
-                corazon.innerHTML = "❤️";
-                corazon.style.left = `${Math.random() * 100}vw`;
-                corazon.style.top = `${Math.random() * 100}vh`;
-                document.body.appendChild(corazon);
-
-                setTimeout(() => {
-                    corazon.remove();
-                }, 2000); 
-            }
+        function generarCorazones(event) {
+            generarEmojis(event, "❤️");
         }
     </script>
 </body>

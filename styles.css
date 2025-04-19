@@ -1,0 +1,258 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fce4ec;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  color: #ec7aa4;
+  position: relative;
+  z-index: 2;
+  font-family: 'Playwrite RO', cursive;
+}
+
+
+#portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fabed2;
+  z-index: 1;
+  position: relative;
+  overflow: hidden; 
+  font-family: 'Playwrite RO', cursive;
+}
+
+#portada .nubes {
+  position: absolute;
+  top: 80%;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-image: url('nubes.png');
+  background-repeat: repeat-x;
+  background-size: 15%;
+  animation: moverNubes 60s linear infinite;
+  z-index: 1; 
+}
+#portada .capa1 {
+  animation: moverNubes1 60s linear infinite;
+  background-size: 15%;
+  z-index: 1;
+}
+
+#portada .capa2 {
+  animation: moverNubes2 80s linear infinite;
+  background-size: 13%;
+  z-index: 2;
+}
+
+#portada .capa3 {
+  animation: moverNubes3 100s linear infinite;
+  background-size: 10%;
+  z-index: 3;
+}
+
+#portada .nube {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-image: url('nubes.png');
+  background-repeat: repeat-x;
+  background-size: 11%;
+  animation: moverNube 30s linear infinite;
+  z-index: 1; 
+}
+#portada .capa4 {
+  animation: moverNube1 60s linear infinite;
+  background-size: 15%;
+  z-index: 1;
+}
+
+#portada .capa5 {
+  animation: moverNube2 90s linear infinite;
+  background-size: 14%;
+  z-index: 2;
+}
+
+#portada .capa6 {
+  animation: moverNube3 50s linear infinite;
+  background-size: 9%;
+  z-index: 3;
+}
+
+
+@keyframes moverNubes {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes moverNubes1 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes moverNubes2 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes moverNubes3 {
+  0% { left: 0; }
+  100% { left: 100%; }
+}
+
+@keyframes moverNube {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes moverNube1 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes moverNube2 {
+  0% { left: 0; }
+  100% { left: 100%; }
+}
+@keyframes moverNube3 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-out {
+  animation: slideOutLeft 1s forwards;
+}
+
+button {
+  background-color: #eb69b9;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 3;
+  font-family: 'Playwrite RO', cursive;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+#juego-area {
+  margin-top: 30px;
+  height: 300px;
+  position: relative;
+  background-color: #fff;
+  border: 2px solid #d81b60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#mensaje-meta {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d81b60;
+}
+
+#mensaje-sorpresa {
+  font-size: 16px;
+  color: #880e4f;
+  font-style: italic;
+  margin-top: 10px;
+  transition: opacity 0.3s;
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 500px;
+  height: 650px;
+  margin: auto;
+}
+
+.card-flip {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: #EEE8DB;
+  border: 2px solid #d81b60;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(216, 27, 96, 0.3);
+  overflow: auto;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.carta-img {
+  width: 100%;
+  height: auto;
+}
+
+.mensaje-escrito {
+  font-size: 16px;
+  color: #880e4f;
+  text-align: left;
+  white-space: pre-wrap;
+  font-style: italic;
+}
+
+.mensaje-final {
+  color: #000000;
+  position: relative;
+  z-index: 2;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: large;
+}

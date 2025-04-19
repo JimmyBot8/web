@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te amo ❤️</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #FADADD;
-            margin: 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        img {
-            width: 300px;
-            height: auto;
-            cursor: pointer;
-        }
-        #texto {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .emoji {
-            position: absolute;
-            font-size: 24px;
-            animation: floatUp 1s ease-out forwards;
-        }
-        @keyframes floatUp {
-            0% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 0; transform: translateY(-50px); }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minijuego del Amor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <img id="imagen" src="milk_dance.gif" alt="Imagen" onclick="cambiarImagen(event)">
-    <div id="texto">Toca a Milk 🌻</div>
+  
+  
+  <div id="portada">
+    <div class="nubes capa1"></div>
+    <div class="nubes capa2"></div>
+    <div class="nubes capa3"></div>
+    <div class="nube capa4"></div>
+    <div class="nube capa5"></div>
+    <div class="nube capa6"></div>
+    <h1>¡Holi mi amor!</h1>
+    <p>¡Ya son 3 meses juntitos mi niña ❤️!</p>
+    <button id="iniciarJuegoBtn">Iniciar</button>
+  </div>
 
-    <script>
-        function cambiarImagen(event) {
-            let img = document.getElementById("imagen");
-            let texto = document.getElementById("texto");
-            if (img.src.includes("milk_dance.gif")) {
-                img.src = "milk_mad.gif";
-                texto.innerText = "No tan fuerte tonota, la hiciste llorar 😡";
-                generarEmojis(event, "😡");
-            } else if (img.src.includes("milk_mad.gif")) {
-                img.src = "milk_love.gif";
-                texto.innerText = "Te amo con todo mi corazón sos lo mejor que me pudo haber pasado, estoy muy feliz de ser tu novio y me encantas en todos los sentidos ❤️";
-                img.onclick = generarCorazones; 
-                generarEmojis(event, "❤️");
-            }
-        }
+  
+  <div id="juego-area" style="display: none;"></div>
+  <p id="puntos" style="display: none;">Puntos: 0</p>
+  <p id="mensaje-meta" style="display: none;">Toca los Yonghees para ganar puntos. Meta: 19 puntos</p>
 
-        function generarEmojis(event, emoji) {
-            for (let i = 0; i < 5; i++) {
-                let element = document.createElement("div");
-                element.className = "emoji";
-                element.innerHTML = emoji;
-                element.style.left = `${event.clientX + (Math.random() * 40 - 20)}px`;
-                element.style.top = `${event.clientY + (Math.random() * 40 - 20)}px`;
-                document.body.appendChild(element);
-                setTimeout(() => element.remove(), 1000);
-            }
-        }
+  
+  <div id="mensaje-sorpresa" style="display: none;"></div>
 
-        function generarCorazones(event) {
-            generarEmojis(event, "❤️");
-        }
-    </script>
+  
+  <div id="carta" style="display: none;">
+    <div class="card-container">
+      <div class="card-flip" id="carta-flip">
+        <div class="front">
+          <img src="carta.png" alt="Cartita" class="carta-img" />
+        </div>
+        <div class="back">
+          <img src="reverso.png" alt="Reverso" class="carta-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p id="mensaje-final" style="display: none;" class="mensaje-final"> Te amo muchisimo mi amor siempre estas en mi mente ❤️</p>
+  
+  <audio id="sonido-click" src="click.mp3" preload="auto"></audio>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="game.js"></script>
+  
+
 </body>
 </html>

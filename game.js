@@ -23,7 +23,7 @@ const mensajeFinal = document.getElementById('mensaje-final');
 
 function generarCorazon() {
   const corazon = document.createElement('img');
-  corazon.src = 'Yonghee.png'; 
+  corazon.src = 'yonghee.png'; 
   corazon.alt = 'Yonghee';
   corazon.style.position = 'absolute';
   corazon.style.left = Math.random() * 90 + '%';

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumple ♥</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="iphone-screen">
+    
+    <div class="home-screen" id="homeScreen">
+      <div class="top-drag-zone" id="topDragZone"></div>
+
+      <div class="status-bar home-status-bar">
+        <div class="status-left">
+          <span class="status-time">9:41</span>
+        </div>
+        <div class="status-right">
+          <svg class="status-icon-ios" viewBox="0 0 18 12" fill="currentColor">
+            <rect x="0" y="8" width="3" height="4" rx="1" />
+            <rect x="5" y="5" width="3" height="7" rx="1" />
+            <rect x="10" y="2" width="3" height="10" rx="1" />
+            <rect x="15" y="0" width="3" height="12" rx="1" />
+          </svg>
+          <svg class="status-icon-ios" viewBox="0 0 16 12" fill="currentColor">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM3.05 6.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.08 0L3.05 6.05zM.22 3.22a11 11 0 0 1 15.56 0l-1.41 1.41a9 9 0 0 0-12.74 0L.22 3.22z"/>
+          </svg>
+          <svg class="status-icon-ios battery-ios" viewBox="0 0 25 12" fill="none" stroke="currentColor">
+            <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke-width="1" />
+            <rect x="2" y="2" width="14" height="8" rx="2" fill="currentColor" />
+            <path d="M23 4v4" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="home-bg"></div>
+
+      <div class="ios-dock">
+        <div class="app-icon" data-app="phone">
+          <span><img src="assets/Home/Telefono.png" alt="Icono celular"></span>
+        </div>
+        <div class="app-icon" data-app="whatsapp">
+          <span><img src="assets/Home/Whatsapp.png" alt="Whatsapp"></span>
+        </div>
+        <div class="app-icon" data-app="chrome">
+          <span><img src="assets/Home/Chrome.png" alt="Chrome"></span>
+        </div>
+        <div class="app-icon" data-app="spotify">
+          <span><img src="assets/Home/Spotify.png" alt="Spotify"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- APP: TELEFONO -->
+    <div class="app-modal" id="modal-phone">
+      <div class="status-bar">
+        <div class="status-left">
+          <span class="status-time">9:41</span>
+        </div>
+        <div class="status-right">
+          <svg class="status-icon-ios" viewBox="0 0 18 12" fill="currentColor">
+            <rect x="0" y="8" width="3" height="4" rx="1" />
+            <rect x="5" y="5" width="3" height="7" rx="1" />
+            <rect x="10" y="2" width="3" height="10" rx="1" />
+            <rect x="15" y="0" width="3" height="12" rx="1" />
+          </svg>
+          <svg class="status-icon-ios" viewBox="0 0 16 12" fill="currentColor">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM3.05 6.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.08 0L3.05 6.05zM.22 3.22a11 11 0 0 1 15.56 0l-1.41 1.41a9 9 0 0 0-12.74 0L.22 3.22z"/>
+          </svg>
+          <svg class="status-icon-ios battery-ios" viewBox="0 0 25 12" fill="none" stroke="currentColor">
+            <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke-width="1" />
+            <rect x="2" y="2" width="14" height="8" rx="2" fill="currentColor" />
+            <path d="M23 4v4" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="phone-nav-bar">
+        <button class="nav-btn">Edit</button>
+        <span class="nav-title">Calls</span>
+        <button class="nav-btn-icon"><i data-lucide="sliders-horizontal"></i></button>
+      </div>
+
+      <div class="calls-list">
+        <div class="call-item">
+          <div class="avatar">M</div>
+          <div class="call-details">
+            <span class="contact-name missed">My Love 💖</span>
+            <span class="call-type">↙ WhatsApp Audio</span>
+          </div>
+          <span class="call-date">1/8/26</span>
+          <button class="call-action"><i data-lucide="phone"></i></button>
+        </div>
+
+        <div class="call-item">
+          <div class="avatar">M</div>
+          <div class="call-details">
+            <span class="contact-name">My Love 💖</span>
+            <span class="call-type">↗ Feliz Cumpleaños 🎂</span>
+          </div>
+          <span class="call-date">1/8/26</span>
+          <button class="call-action"><i data-lucide="phone"></i></button>
+        </div>
+
+        <div class="call-item">
+          <div class="avatar">M</div>
+          <div class="call-details">
+            <span class="contact-name">My Love 💖</span>
+            <span class="call-type">↗ Te amo muchisimoo mi amor (3)</span>
+          </div>
+          <span class="call-date">1/8/26</span>
+          <button class="call-action"><i data-lucide="phone"></i></button>
+        </div>
+
+        <div class="call-item">
+          <div class="avatar">P</div>
+          <div class="call-details">
+            <span class="contact-name">My Love 💖</span>
+            <span class="call-type">↙ mobile</span>
+          </div>
+          <span class="call-date">1/8/26</span>
+          <button class="call-action"><i data-lucide="phone"></i></button>
+        </div>
+
+        <div class="call-item">
+          <div class="avatar default-avatar icon-avatar"><i data-lucide="user"></i></div>
+          <div class="call-details">
+            <span class="contact-name">+82 10-2503-7541</span>
+            <span class="call-type">↗ Corea (2)</span>
+          </div>
+          <span class="call-date">1/8/26</span>
+          <button class="call-action"><i data-lucide="phone"></i></button>
+        </div>
+
+        <div class="call-item">
+          <div class="avatar">M</div>
+          <div class="call-details">
+            <span class="contact-name">My Love 💖</span>
+            <span class="call-type">↗ Mi vida hermosa 💞</span>
+          </div>
+          <span class="call-date">17/7/26</span>
+          <button class="call-action video-btn"><i data-lucide="video"></i></button>
+        </div>
+      </div>
+
+      <div class="phone-tab-bar">
+        <div class="tab-item active">
+          <i data-lucide="clock"></i>
+          <span>Calls</span>
+        </div>
+        <div class="tab-item">
+          <i data-lucide="user-round"></i>
+          <span>Contacts</span>
+        </div>
+        <div class="tab-item">
+          <i data-lucide="grid-3x3"></i>
+          <span>Keypad</span>
+        </div>
+        <div class="tab-item search-tab">
+          <i data-lucide="search"></i>
+        </div>
+      </div>
+
+      <div class="app-home-bar close-app"></div>
+    </div>
+
+    <!-- APP: WHATSAPP -->
+    <div class="app-modal" id="modal-whatsapp">
+      <div class="status-bar">
+        <div class="status-left">
+          <span class="status-time">12:24</span>
+        </div>
+        <div class="status-right">
+          <svg class="status-icon-ios" viewBox="0 0 18 12" fill="currentColor">
+            <rect x="0" y="8" width="3" height="4" rx="1" />
+            <rect x="5" y="5" width="3" height="7" rx="1" />
+            <rect x="10" y="2" width="3" height="10" rx="1" />
+            <rect x="15" y="0" width="3" height="12" rx="1" />
+          </svg>
+          <svg class="status-icon-ios" viewBox="0 0 16 12" fill="currentColor">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM3.05 6.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.08 0L3.05 6.05zM.22 3.22a11 11 0 0 1 15.56 0l-1.41 1.41a9 9 0 0 0-12.74 0L.22 3.22z"/>
+          </svg>
+          <svg class="status-icon-ios battery-ios" viewBox="0 0 25 12" fill="none" stroke="currentColor">
+            <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke-width="1" />
+            <rect x="2" y="2" width="14" height="8" rx="2" fill="currentColor" />
+            <path d="M23 4v4" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="wa-header">
+        <div class="wa-header-left">
+          <button class="wa-back-btn close-app"><i data-lucide="chevron-left"></i> <span></span></button>
+          <div class="wa-avatar">
+            <img src="assets/Apps/Avatar.png" alt="Diavlo" id="waProfilePic">
+          </div>
+          <span class="wa-user-name">My Love 💖</span>
+        </div>
+        <div class="wa-header-right">
+          <button class="wa-icon-btn"><i data-lucide="video"></i></button>
+          <button class="wa-icon-btn"><i data-lucide="phone"></i></button>
+        </div>
+      </div>
+
+      <div class="wa-chat-body" id="waChatBody">
+        <div class="wa-messages-container" id="waMessagesContainer"></div>
+      </div>
+
+      <div class="wa-input-bar">
+        <button class="wa-action-btn"><i data-lucide="plus"></i></button>
+        <div class="wa-input-pill">
+          <i data-lucide="sticker" class="wa-pill-icon"></i>
+        </div>
+        <button class="wa-action-btn"><i data-lucide="camera"></i></button>
+        <button class="wa-action-btn"><i data-lucide="mic"></i></button>
+      </div>
+
+      <div class="app-home-bar close-app"></div>
+    </div>
+      
+    <!-- APP: CHROME -->
+    <div class="app-modal" id="modal-chrome">
+      <div class="status-bar chrome-status-bar">
+        <div class="status-left">
+          <span class="status-time">4:13</span>
+        </div>
+        <div class="status-right">
+          <svg class="status-icon-ios" viewBox="0 0 18 12" fill="currentColor">
+            <rect x="0" y="8" width="3" height="4" rx="1" />
+            <rect x="5" y="5" width="3" height="7" rx="1" />
+            <rect x="10" y="2" width="3" height="10" rx="1" />
+            <rect x="15" y="0" width="3" height="12" rx="1" />
+          </svg>
+          <svg class="status-icon-ios" viewBox="0 0 16 12" fill="currentColor">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM3.05 6.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.08 0L3.05 6.05zM.22 3.22a11 11 0 0 1 15.56 0l-1.41 1.41a9 9 0 0 0-12.74 0L.22 3.22z"/>
+          </svg>
+          <svg class="status-icon-ios battery-ios" viewBox="0 0 25 12" fill="none" stroke="currentColor">
+            <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke-width="1" />
+            <rect x="2" y="2" width="14" height="8" rx="2" fill="currentColor" />
+            <path d="M23 4v4" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="chrome-address-bar">
+        <button class="chrome-icon-btn"><i data-lucide="sparkles"></i></button>
+        <div class="chrome-url-box">
+          <span>google.com</span>
+        </div>
+        <button class="chrome-icon-btn"><i data-lucide="share"></i></button>
+      </div>
+
+      <div class="chrome-body">
+        <div class="chrome-google-header">
+          <div class="google-logo">
+            <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span>
+          </div>
+          <div class="chrome-profile-avatar">
+            <img src="assets/Apps/Chrome/Yonghee.jpg" alt="Perfil">
+          </div>
+        </div>
+
+        <div class="chrome-search-input-box">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" value="Felicidadeeeeeeeeeeeeeees 💞" class="chrome-search-input" readonly>
+          <i data-lucide="x" class="clear-icon"></i>
+          <i data-lucide="mic" class="mic-icon"></i>
+        </div>
+
+        <div class="chrome-nav-pills">
+          <span class="pill active">All</span>
+          <span class="pill">Images</span>
+          <span class="pill">Videos</span>
+          <span class="pill">Short videos</span>
+          <span class="pill">News</span>
+          <span class="pill">Web</span>
+        </div>
+
+        <div class="chrome-ai-card">
+          <div class="ai-header">
+            <div class="ai-title">
+              <i data-lucide="sparkles" class="ai-sparkle-icon"></i>
+              <span>AI Overview</span>
+            </div>
+            <div class="ai-right">
+              <div class="ai-badges">
+                <span class="badge blue"><i data-lucide="shield"></i></span>
+                <span class="badge orange"><i data-lucide="zap"></i></span>
+                <span class="badge dark-blue">+1</span>
+              </div>
+              <i data-lucide="more-vertical" class="ai-more"></i>
+            </div>
+          </div>
+
+          <div class="ai-content">
+            <p>
+              <span class="highlight-text">En este día tan especial espero que lo pases muy bien, que podas disfrutar al máximo tu día y que sepas que estoy muy orgulloso de vos siempre, gracias por siempre estar conmigo en cualquier situacion, te amo muchisimo 💖</span>
+              <i data-lucide="link" class="inline-link-icon"></i>
+            </p>
+            
+            <p class="ai-subtext">
+              Felices 22 mi amor, siempre te voy a amar con todo mi corazón infinitamente 💖
+            </p>
+
+            <button class="ai-show-more">
+              <span>Show more</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="chrome-search-result">
+          <div class="result-header">
+            <div class="result-icon-box">
+              <i data-lucide="music" class="spotify-brand-icon"></i>
+            </div>
+            <div class="result-meta">
+              <span class="site-name">Spotify</span>
+              <span class="site-url">https://open.spotify.com</span>
+            </div>
+            <i data-lucide="more-vertical" class="result-more"></i>
+          </div>
+          <h3 class="result-title">My Princesa ❤️🎂 - Playlist de Jimmy 🍞</h3>
+          <div class="result-body">
+            <p class="result-snippet">
+              Gracias por todo mi amor, siempre voy a estar para apoyarte en todo lo que te propongas y estoy seguro que vas a cumplir todo lo que te propongas ❤️
+            </p>
+            <img src="assets/Apps/Spotify/Cover_playlist.jpg" alt="Portada" class="result-thumb">
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom-bar">
+        <button class="chrome-tab-btn"><i data-lucide="arrow-left"></i></button>
+        <button class="chrome-tab-btn"><i data-lucide="arrow-right"></i></button>
+        <button class="chrome-tab-btn add-btn"><i data-lucide="plus"></i></button>
+        <button class="chrome-tab-btn tabs-count"><span>91</span></button>
+        <button class="chrome-tab-btn"><i data-lucide="more-horizontal"></i></button>
+      </div>
+
+      <div class="app-home-bar close-app"></div>
+    </div>
+
+    <!-- APP: SPOTIFY -->
+    <div class="app-modal" id="modal-spotify">
+      <div class="status-bar sp-status-bar">
+        <div class="status-left">
+          <span class="status-time">2:45</span>
+        </div>
+        <div class="status-right">
+          <svg class="status-icon-ios" viewBox="0 0 18 12" fill="currentColor">
+            <rect x="0" y="8" width="3" height="4" rx="1" />
+            <rect x="5" y="5" width="3" height="7" rx="1" />
+            <rect x="10" y="2" width="3" height="10" rx="1" />
+            <rect x="15" y="0" width="3" height="12" rx="1" />
+          </svg>
+          <svg class="status-icon-ios" viewBox="0 0 16 12" fill="currentColor">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM3.05 6.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.08 0L3.05 6.05zM.22 3.22a11 11 0 0 1 15.56 0l-1.41 1.41a9 9 0 0 0-12.74 0L.22 3.22z"/>
+          </svg>
+          <svg class="status-icon-ios battery-ios" viewBox="0 0 25 12" fill="none" stroke="currentColor">
+            <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke-width="1" />
+            <rect x="2" y="2" width="14" height="8" rx="2" fill="currentColor" />
+            <path d="M23 4v4" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="sp-header">
+        <button class="sp-back-btn close-app">
+          <i data-lucide="chevron-left"></i>
+        </button>
+      </div>
+
+      <div class="sp-body">
+        <div class="sp-cover-container">
+          <img src="assets/Apps/Spotify/Cover_playlist.jpg" alt="My Princesa" class="sp-cover-img">
+        </div>
+
+        <div class="sp-playlist-info">
+          <h1 class="sp-title">My Princesa ❤️🎂</h1>
+          <p class="sp-description">Feliz cumpleaños mi amorcito te amo con todo mi corazón ❤️❤️</p>
+          
+          <div class="sp-author">
+            <div class="sp-author-avatar">
+              <img src="assets/Apps/Spotify/Nohacenada.png" alt="Jimmy">
+            </div>
+            <span class="sp-author-name">Jimmy 🍞</span>
+          </div>
+
+          <div class="sp-meta">
+            <i data-lucide="lock" class="sp-lock-icon"></i>
+            <span>18 min</span>
+          </div>
+        </div>
+
+        <div class="sp-actions-bar">
+          <div class="sp-actions-left">
+            <button class="sp-icon-btn"><i data-lucide="arrow-down-circle"></i></button>
+            <button class="sp-icon-btn"><i data-lucide="share-2"></i></button>
+            <button class="sp-icon-btn"><i data-lucide="more-horizontal"></i></button>
+          </div>
+          <div class="sp-actions-right">
+            <button class="sp-icon-btn"><i data-lucide="shuffle"></i></button>
+            <a href="https://open.spotify.com/playlist/4kkZYhdzqd41xg6ja5ff1k" target="_blank" rel="noopener noreferrer" class="sp-play-btn">
+              <i data-lucide="play"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sp-pills-row">
+          <button class="sp-pill"><i data-lucide="plus"></i> Add</button>
+          <button class="sp-pill"><i data-lucide="sliders"></i> Mix</button>
+          <button class="sp-pill"><i data-lucide="square-play"></i> Video</button>
+          <button class="sp-pill"><i data-lucide="pen-tool"></i> Edit</button>
+          <button class="sp-pill"><i data-lucide="arrow-down-up"></i> Sort</button>
+        </div>
+
+        <div class="sp-track-list">
+          <div class="sp-track-item">
+            <img src="assets/Apps/Spotify/CIX.png" alt="The One" class="sp-track-img">
+            <div class="sp-track-details">
+              <span class="sp-track-title">The One</span>
+              <span class="sp-track-artist">CIX</span>
+            </div>
+            <button class="sp-track-more"><i data-lucide="more-horizontal"></i></button>
+          </div>
+
+          <div class="sp-track-item">
+            <img src="assets/Apps/Spotify/Ete.png" alt="Été avec toi" class="sp-track-img">
+            <div class="sp-track-details">
+              <span class="sp-track-title">Été avec toi</span>
+              <span class="sp-track-artist"><i data-lucide="square-play" class="sp-inline-video"></i> Video • Adèle Castillon</span>
+            </div>
+            <button class="sp-track-more"><i data-lucide="more-horizontal"></i></button>
+          </div>
+
+          <div class="sp-track-item">
+            <img src="assets/Apps/Spotify/Love_Always.png" alt="All My Life" class="sp-track-img">
+            <div class="sp-track-details">
+              <span class="sp-track-title">All My Life</span>
+              <span class="sp-track-artist"><i data-lucide="square-play" class="sp-inline-video"></i> Video • K-Ci & JoJo</span>
+            </div>
+            <button class="sp-track-more"><i data-lucide="more-horizontal"></i></button>
+          </div>
+
+          <div class="sp-track-item">
+            <img src="assets/Apps/Spotify/Bruno.png" alt="Marry You" class="sp-track-img">
+            <div class="sp-track-details">
+              <span class="sp-track-title">Marry You</span>
+              <span class="sp-track-artist">Bruno Mars</span>
+            </div>
+            <button class="sp-track-more"><i data-lucide="more-horizontal"></i></button>
+          </div>
+
+          <div class="sp-track-item">
+            <img src="assets/Apps/Spotify/Only_you.png" alt="Only You(And You Alone)" class="sp-track-img">
+            <div class="sp-track-details">
+              <span class="sp-track-title">Only You(And You Alone)</span>
+              <span class="sp-track-artist">The Platters</span>
+            </div>
+            <button class="sp-track-more"><i data-lucide="more-horizontal"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-now-playing">
+        <div class="sp-np-left">
+          <img src="assets/Apps/Spotify/Bruno.png" alt="Marry You" class="sp-np-img">
+          <div class="sp-np-details">
+            <span class="sp-np-title">Marry You</span>
+            <span class="sp-np-artist">Bruno Mars</span>
+          </div>
+        </div>
+        <div class="sp-np-right">
+          <button class="sp-np-btn"><i data-lucide="speaker"></i></button>
+          <button class="sp-np-btn"><i data-lucide="pause"></i></button>
+        </div>
+        <div class="sp-np-progress"></div>
+      </div>
+
+      <div class="sp-tab-bar">
+        <div class="sp-tab-item">
+          <i data-lucide="house"></i>
+          <span>Home</span>
+        </div>
+        <div class="sp-tab-item">
+          <i data-lucide="search"></i>
+          <span>Search</span>
+        </div>
+        <div class="sp-tab-item active">
+          <i data-lucide="library"></i>
+          <span>Your Library</span>
+        </div>
+        <div class="sp-tab-item">
+          <i data-lucide="plus"></i>
+          <span>Create</span>
+        </div>
+      </div>
+
+      <div class="app-home-bar close-app"></div>
+    </div>
+
+    <!-- LOCK SCREEN -->
+    <div class="lock-screen" id="lockScreen">
+      <div class="bg-blur"></div>
+
+      <header class="lock-header">
+        <span class="time" id="clock">12:00</span>
+        <span class="date">Sat 1 Aug</span>
+      </header>
+
+      <main class="album-container">
+        <img src="assets/Cumple_portada.jpg" alt="Portada" id="coverArt">
+      </main>
+
+      <section class="player-widget">
+        <div class="track-info">
+          <h2 class="song-title">Clover</h2>
+          <p class="artist-name">A.C.E • Feliz Cumple</p>
+          <div class="sound-wave">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+          <div class="time-stamps">
+            <span id="currentTime">0:03</span>
+            <span id="duration">-3:05</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btn-control" aria-label="Anterior">
+            <i data-lucide="rewind"></i>
+          </button>
+          <button class="btn-control play-btn" id="playBtn" aria-label="Reproducir">
+            <i data-lucide="pause" id="playIcon"></i>
+          </button>
+          <button class="btn-control" aria-label="Siguiente">
+            <i data-lucide="fast-forward"></i>
+          </button>
+          <button class="btn-control airplay-btn" aria-label="AirPlay">
+            <i data-lucide="airplay"></i>
+          </button>
+        </div>
+      </section>
+
+      <footer class="lock-footer">
+        <button class="quick-action" aria-label="Linterna"><i data-lucide="flashlight"></i></button>
+        <button class="quick-action" aria-label="Cámara"><i data-lucide="camera"></i></button>
+      </footer>
+
+      <div class="home-button" id="swipeBar"></div>
+    </div>
+
+  </div>
+
+  <audio id="audio" src="assets/Clover.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
